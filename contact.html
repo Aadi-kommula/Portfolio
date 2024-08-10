@@ -38,9 +38,9 @@ p{
   margin: 10px;
   line-height: 30px;
 }
-p:hover{
+/* p:hover{
   font-weight: bold;
-}
+} */
 .contact-item{
   display: flex;
   text-align: center;
@@ -67,7 +67,7 @@ p:hover{
  }
  .contact-item i:hover{
   transition: all 0.2s ease-in-out;
-  transform: scale(1.1) rotate(-5deg);
+  transform:  rotate(-5deg);
   width:43px;
   height: 43px;
  }
@@ -76,9 +76,12 @@ p:hover{
 }
  footer p{
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-size: 10px;
+font-size: 12px;
 text-align: center;
 font-weight: normal;
+}
+footer p span{
+  color:white;
 }
 .container {animation: slideIn 2s ;}
     @keyframes slideIn {
@@ -100,7 +103,9 @@ font-weight: normal;
     <div class="contact">
         <div class="contact-item">
           <i class="fas fa-map-marker-alt"></i>
-          <p>Address: Pasarlpaudi Ramalayam Street<br> Andhra Pradesh<br>India Pincode 533247</p>
+          <p>Address: Pasarlpaudi Ramalayam Street<br>
+            Andhra Pradesh
+            <br>India Pincode 533247</p>
         </div>
         <div class="contact-item">
           <i class="fas fa-phone-alt"></i>
@@ -115,10 +120,14 @@ font-weight: normal;
       </div>
     </div>
     <footer>
-      <p>&copy; 2024 Aadi's Portfolio. All rights reserved.</p>
+      <p>&copy; 2022-<span id="current-year"></span> Aadi's Portfolio. All rights reserved.</p>
       </div>
     </footer>
-    
+    <script>
+      let d=new Date()
+      year=d.getFullYear()
+      document.getElementById("current-year").innerHTML=year;
+    </script>
 
 </body>
 </body>

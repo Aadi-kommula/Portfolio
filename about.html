@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- <link rel="stylesheet" href="main.css"> -->
+  <script src="script.js"></script>
   <title>Portfolio-About</title>
 </head>
 <body>
@@ -53,7 +53,7 @@ h1,h2{
     transform: scale(.9);  */
 }
 h2{
-    color: rgba(38, 247, 247, 0.895);
+   
 }
 span{
     color: #fff724;
@@ -63,9 +63,9 @@ p{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-p:hover{
+/* p:hover{
    font-weight: bold;
-}
+} */
 img{
     border-radius: 20px;
     float: right;
@@ -101,6 +101,10 @@ img:hover{
     font-size: 15px;
     
 }
+#h4tag{
+    margin-left: 100px;
+    color: rgba(38, 247, 247, 0.895);
+}
 #h4tag:hover{
     color: rgba(38, 247, 247, 0.895);
 }
@@ -134,11 +138,14 @@ h4{
 footer p{
 
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-size: 10px;
+font-size: 13px;
 text-align: center;
 font-weight: normal;
-margin-left: 150px;
+margin-left: 10px;
 margin-top: 90px;
+}
+footer p span{
+    color: #fff;
 }
 .container {animation: slideIn 3s ;}
     @keyframes slideIn {
@@ -155,7 +162,7 @@ margin-top: 90px;
     <div class="container" style="justify-content: space-between;"> 
         <div class="user-info" >
         <h1 style="color: #fff;">About <span>Me</span> </h1>
-        <h2> <b> Software Engineer</b></h2>
+        <!-- <h2> <b> Software Engineer</b></h2> -->
         <p style="width: 500px;" ><i>I'm a software Engineer Graduated on Bsc Computer's from adikavi nannaya university & Master's on Computer Applications 
             from Swarnandhra College of engineering and technology (autonomus)
             Enthusiastic and driven MCA student with a passion for web
@@ -184,9 +191,18 @@ margin-top: 90px;
         </div>
         </div>
         <footer>
-            <p>&copy; 2024 Aadi's Portfolio. All rights reserved.</p>
+            <p>&copy; 2022-<span id="current-year"></span> Aadi's Portfolio. All rights reserved.</p>
             </div>
           </footer>
-          
+          <script>
+            let d=new Date()
+            var year=d.getFullYear()
+            console.log(year)
+            document.getElementById("current-year").innerHTML=year
+            
+         
+            
+
+          </script>
 </body>
 </html>

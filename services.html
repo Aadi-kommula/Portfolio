@@ -63,8 +63,10 @@ h3{
 p{  
     font-style: italic;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-wrap-mode:wrap;
+    
 }
-p:hover{
+#content:hover{
     font-weight: bold;
 }
 button{
@@ -84,10 +86,10 @@ button:hover{
 footer p{
 
 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-size: 10px;
+font-size: 12px;
 text-align: center;
-font-weight: normal;
-margin-left: 150px;
+font-weight:normal;
+margin-left: 10px;
 font-style: normal;
 }
 .container {animation: fadeIn 9s ;}
@@ -96,14 +98,7 @@ font-style: normal;
         50% {opacity: 5;}
 }
 </style>
-<script>
-function webdev(){
-    window.location="https://azure-liane-15.tiiny.site/";
-}
-function pythondev(){
-    window.location="https://github.com/Aadi-kommula/React-Customer-Deatils-App";
-}
-</script>
+
     <div class="navbar">
         <a href="contact.html">CONTACT</a>
         <a href="about.html">ABOUT</a>
@@ -112,35 +107,49 @@ function pythondev(){
     </div>
     <h2>My Services</h2>
     <div class="container">
+        <div class="user-info">
+            <i class="fa-brands fa-java"></i>
+            <h3>Java Developer</h3>
+            <p id="content">In the realm of Java development, my expertise shines brightly. 
+                With a solid foundation in Java programming, I effortlessly navigate through 
+                complex code structures to build robust
+                 and efficient solutions. Whether it's crafting elegant algorithms, designing scalable 
+                 enterprise applications, or optimizing performance-critical systems, Java is my go-to tool of choice. 
+                 From frameworks like Spring and Hibernate to libraries like Apache Commons and Google Guava, 
+                 I leverage the power of Java to tackle diverse challenges with precision. With a keen focus on clean code 
+                 and optimal performance, I bring innovation and reliability to every Java project I undertake.</p>
+                   <button onclick="pythondev()">Click here</button>    
+             </div>
+
        <div class="user-info">
        <i class="fa-solid fa-code"></i>
         <h3>Web Development</h3>
-        <p>Crafting responsive webpages requires a delicate balance of creativity and technical finesse, 
+        <p id="content">Crafting responsive webpages requires a delicate balance of creativity and technical finesse, 
             and I've honed my skills to seamlessly blend both. With a keen eye for design and a deep 
             understanding of HTML, CSS, and JavaScript, I excel in creating websites that adapt flawlessly
              to any screen size or device. From fluid layouts to flexible grids, I leverage the latest techniques
               and frameworks to ensure an optimal user experience across desktops, tablets, and smartphones. 
               My passion for web development drives me to stay abreast of industry trends and best practices,
                allowing me to deliver responsive solutions that not only meet but exceed client expectations.</p>
-        <button onclick="webdev()">Look here</button>
-       </div>
-        
-      <div class="user-info">
-        <i class="fa-brands fa-python"></i>
-        <h3>Python Developer</h3>
-        <p>In the realm of Python development, my expertise shines brightly. With a solid foundation in Python programming,
-             I effortlessly navigate through intricate code structures to build robust and efficient solutions. Whether it's c
-             rafting elegant algorithms, designing scalable applications, or automating mundane tasks, Python is my go-to tool of
-              choice. From web development frameworks like Django and Flask to data science libraries like NumPy and pandas, 
-              I harness the power of Python to tackle diverse challenges with finesse. With a keen focus on clean code and optimal
-               performance, I bring innovation and reliability to every Python project I undertake.</p>
-               <button onclick="pythondev()">Look here</button>    
-         </div>
+        <button onclick="webdev()">Click here</button>
+       </div>       
+      
     </div>
     <footer>
-        <p>&copy; 2024 Aadi's Portfolio. All rights reserved.</p>
+        <p>&copy; 2022-<span id="current-year"></span> Aadi's Portfolio. All rights reserved.</p>
         </div>
       </footer>
-      
+      <script>
+        function webdev(){
+            window.location="https://aadi-webapps.free.nf/";
+        }
+        function pythondev(){
+            window.location="https://github.com/Aadi-kommula/React-Customer-Deatils-App";
+        }
+       let date =new Date()
+        var year=date.getFullYear();
+        //console.log(year);
+        document.getElementById("current-year").innerHTML=year;
+        </script>
 </body>
 </html>
